@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import CodeComponent from './components/CodeComponent';
 
 const code = `function MyButton() {
@@ -16,10 +17,16 @@ export default function MyApp() {
     </div>
   );
 }`;
+
 function App() {
   return (
     <div className="App">
-      <CodeComponent code={code} language="javascript" />
+      <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
+        <CodeComponent code={code} language="javascript" />
+      </Box>
+      <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
+        <CodeComponent code={code} language="javascript" />
+      </Box>
     </div>
   );
 }
