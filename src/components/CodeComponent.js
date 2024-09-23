@@ -23,7 +23,6 @@ export default function CodeComponent({ code, language, title = 'Javascript.js' 
       clearTimeout(timer);
     };
   }, [isCopied]);
-  console.log('rendering..', title);
 
   return (
     <Stack sx={{ background: '#2F2F2F', p: '1px', borderRadius: '5px' }}>
