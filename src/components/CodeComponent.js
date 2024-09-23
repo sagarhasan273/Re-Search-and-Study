@@ -2,7 +2,8 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import { Button, Stack, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { CopyBlock, atomOneDark } from 'react-code-blocks';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function CodeComponent({ code, language, title = 'Javascript.js' }) {
   const [isCopied, setIsCopied] = useState(false);
@@ -22,16 +23,17 @@ export default function CodeComponent({ code, language, title = 'Javascript.js' 
       clearTimeout(timer);
     };
   }, [isCopied]);
+  console.log('rendering..', title);
 
   return (
     <Stack sx={{ background: '#2F2F2F', p: '1px', borderRadius: '5px' }}>
-      <Stack sx={{ flexDirection: 'row', justifyContent: 'space-between', p: 1, pb: '2px' }}>
-        <Typography sx={{ color: '#adadad' }}>{title}</Typography>
+      <Stack sx={{ flexDirection: 'row', justifyContent: 'space-between', p: 1, pb: '2px' }} alignItems="center">
+        <Typography sx={{ color: '#dbdbdb' }}>{title}</Typography>
         {!isCopied ? (
           <Button
             size="small"
             sx={{
-              color: '#adadad',
+              color: '#dbdbdb',
               textTransform: 'capitalize',
               '&:hover': {
                 background: 'transparent',
@@ -47,7 +49,7 @@ export default function CodeComponent({ code, language, title = 'Javascript.js' 
           <Button
             size="small"
             sx={{
-              color: '#adadad',
+              color: '#dbdbdb',
               textTransform: 'capitalize',
               '&:hover': {
                 background: 'transparent',
@@ -61,13 +63,11 @@ export default function CodeComponent({ code, language, title = 'Javascript.js' 
           </Button>
         )}
       </Stack>
-      <CopyBlock
-        copied={isCopied ? code : undefined}
-        text={code}
-        language={language}
-        showLineNumbers={false}
-        theme={atomOneDark}
-      />
+      <Stack sx={{ padding: '0px 5px' }}>
+        <SyntaxHighlighter language={language} style={okaidia}>
+          {code}
+        </SyntaxHighlighter>
+      </Stack>
     </Stack>
   );
 }

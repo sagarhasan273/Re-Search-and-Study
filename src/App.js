@@ -18,6 +18,16 @@ export default function MyApp() {
   );
 }`;
 
+const python = `fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+`;
+
 function App() {
   return (
     <div className="App">
@@ -25,7 +35,7 @@ function App() {
         <CodeComponent code={code} language="javascript" />
       </Box>
       <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
-        <CodeComponent code={code} language="javascript" />
+        <CodeComponent code={python} language="python" title="Python" />
       </Box>
     </div>
   );
