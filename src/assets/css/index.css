@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.javascript_code pre {
+  margin: 1px !important;
+  background: rgb(22 22 22) !important;
+  border-radius: 0px 0px 5px 5px !important;
+}
