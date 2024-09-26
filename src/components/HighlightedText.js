@@ -8,8 +8,8 @@ const CustomTypography = {
   borderRadius: '5px',
 };
 
-function HighlightedText({ children }) {
+function HlText({ children }) {
   return <span style={CustomTypography}>{children}</span>;
 }
 
-export default HighlightedText;
+export default HlText;
