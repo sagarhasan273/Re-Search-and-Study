@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
-import Artical from './components/PlainText';
 import CodeComponent from './components/CodeComponent';
+import Artical from './components/PlainText';
+import UnorderList from './components/UnorderList';
 
 const code = `function MyButton() {
   return (
@@ -34,7 +35,9 @@ function App() {
     <Box pb={5} className="App">
       <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <Artical />
+        <UnorderList />
       </Box>
+
       <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <CodeComponent code={code} language="javascript" />
       </Box>
