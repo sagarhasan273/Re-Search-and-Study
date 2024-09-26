@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import Artical from './components/Artical';
+import Artical from './components/PlaineText';
 import CodeComponent from './components/CodeComponent';
 
 const code = `function MyButton() {
@@ -33,13 +33,13 @@ function App() {
   return (
     <Box pb={5} className="App">
       <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
+        <Artical />
+      </Box>
+      <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <CodeComponent code={code} language="javascript" />
       </Box>
       <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <CodeComponent code={python} language="python" title="Python" />
-      </Box>
-      <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
-        <Artical />
       </Box>
     </Box>
   );
