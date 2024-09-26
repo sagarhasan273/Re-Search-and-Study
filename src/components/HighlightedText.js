@@ -1,18 +1,15 @@
-import { styled, Typography } from '@mui/material';
 import React from 'react';
 
-const CustomTypography = styled(Typography)(() => ({
+const CustomTypography = {
   backgroundColor: '#424242',
-  display: 'inline-block',
+  padding: '3px',
   paddingLeft: '5px',
   paddingRight: '5px',
   borderRadius: '5px',
-  marginLeft: '5px',
-}));
+};
 
 function HighlightedText({ children }) {
-  console.log(children);
-  return <CustomTypography>{children}</CustomTypography>;
+  return <span style={CustomTypography}>{children}</span>;
 }
 
 export default HighlightedText;
