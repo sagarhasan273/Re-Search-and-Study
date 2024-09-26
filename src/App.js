@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import Artical from './components/PlaineText';
+import Artical from './components/PlainText';
 import CodeComponent from './components/CodeComponent';
 
 const code = `function MyButton() {
