@@ -1,39 +1,41 @@
 import { Box } from '@mui/material';
-import CodeComponent from './components/CodeComponent';
-import Artical from './components/PlainText';
-import UnorderList from './components/UnorderList';
+import { Route, Routes } from 'react-router-dom';
+import { routes } from './routes/routes';
+// import CodeComponent from './components/CodeComponent';
+// import Artical from './components/PlainText';
+// import UnorderList from './components/UnorderList';
 
-const code = `function MyButton() {
-  return (
-    <button>
-      I'm a button
-    </button>
-  );
-}
+// const code = `function MyButton() {
+//   return (
+//     <button>
+//       I'm a button
+//     </button>
+//   );
+// }
 
-export default function MyApp() {
-  return (
-    <div>
-      <h1>Welcome to my app</h1>
-      <MyButton />
-    </div>
-  );
-}`;
+// export default function MyApp() {
+//   return (
+//     <div>
+//       <h1>Welcome to my app</h1>
+//       <MyButton />
+//     </div>
+//   );
+// }`;
 
-const python = `fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
-newlist = []
+// const python = `fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+// newlist = []
 
-for x in fruits:
-  if "a" in x:
-    newlist.append(x)
+// for x in fruits:
+//   if "a" in x:
+//     newlist.append(x)
 
-print(newlist)
-`;
+// print(newlist)
+// `;
 
 function App() {
   return (
     <Box pb={5} className="App">
-      <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
+      {/* <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <Artical />
         <UnorderList />
       </Box>
@@ -43,7 +45,12 @@ function App() {
       </Box>
       <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <CodeComponent code={python} language="python" title="Python" />
-      </Box>
+      </Box> */}
+      <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.component} />
+        ))}
+      </Routes>
     </Box>
   );
 }
