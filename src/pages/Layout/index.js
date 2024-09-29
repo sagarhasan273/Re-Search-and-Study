@@ -5,7 +5,7 @@ import { routes } from '../../routes/routes';
 
 function Layout() {
   return (
-    <Box>
+    <Box sx={{ overflow: 'hidden' }}>
       <Routes>
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.component} />
