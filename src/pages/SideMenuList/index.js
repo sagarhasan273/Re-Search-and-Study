@@ -6,7 +6,7 @@ const CustomButton = styled(Button)({
   textTransform: 'capitalize',
   borderRadius: '0px',
   '&:hover': {
-    backgroundColor: '#212121', // Disable hover background
+    backgroundColor: '#212121',
   },
 });
 
@@ -15,9 +15,9 @@ function SideMenuList({ open }) {
     <Box
       sx={{
         width: open ? '250px' : '0px',
-        transition: 'width 0.3s ease', // Adding transition for smooth animation
-        overflow: 'hidden', // Ensures content doesn't spill out when width is 0px
-        backgroundColor: '#3a3a3b', // Optional: Adds background color to visualize the side menu
+        transition: 'width 0.3s ease',
+        overflow: 'hidden',
+        backgroundColor: '#3a3a3b',
         height: '100%',
       }}
     >

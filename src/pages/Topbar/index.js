@@ -23,7 +23,7 @@ function Topbar({ setOpen }) {
         <MenuIcon />
       </Button>
       <Box p={2}>
-        <Avatar alt="Sagar Hasan" src={profile_dp}></Avatar>
+        <Avatar sx={{ width: '38px', height: '38px' }} alt="Sagar Hasan" src={profile_dp}></Avatar>
       </Box>
     </Stack>
   );
