@@ -3,9 +3,6 @@ import { useState } from 'react';
 import Layout from './pages/Layout';
 import SideMenuList from './pages/SideMenuList';
 import Topbar from './pages/Topbar';
-// import CodeComponent from './components/CodeComponent';
-// import Artical from './components/PlainText';
-// import UnorderList from './components/UnorderList';
 
 function App() {
   const [open, setOpen] = useState(false);

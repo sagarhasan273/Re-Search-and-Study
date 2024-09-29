@@ -33,7 +33,7 @@ print(newlist)
 
 function JavaScriptDoc() {
   return (
-    <Box sx={{ overflowY: 'scroll', height: '100%', pb: '40px' }}>
+    <Box className="stylishScrollbar" sx={{ overflowY: 'scroll', height: '100%', pb: '40px' }}>
       <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <PlainText />
         <UnorderList />

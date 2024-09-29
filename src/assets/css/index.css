@@ -20,3 +20,42 @@ code {
   background: rgb(22 22 22) !important;
   border-radius: 0px 0px 5px 5px !important;
 }
+
+/* Hide scrollbar but still allow scrolling */
+.scrollbarForSideMenubar {
+  overflow: hidden;
+  padding-right: 17px; 
+}
+
+.scrollbarForSideMenubar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.scrollbarForSideMenubar::-webkit-scrollbar {
+  display: none;
+}
+
+.stylishScrollbar {
+  overflow: hidden;
+  padding-right: 17px; 
+}
+
+.stylishScrollbar {
+  overflow-y: scroll;
+  scrollbar-width: 5px;
+}
+
+.stylishScrollbar::-webkit-scrollbar {
+  width: 8px; 
+  height: 5px;
+}
+
+.stylishScrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(175, 175, 175); 
+  border-radius: 10px; 
+}
+
+/* .stylishScrollbar::-webkit-scrollbar-track {
+  background-color: rgb(77, 77, 77); 
+} */

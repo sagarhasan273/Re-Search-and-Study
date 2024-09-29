@@ -18,17 +18,23 @@ function SideMenuList({ open }) {
         transition: 'width 0.3s ease', // Adding transition for smooth animation
         overflow: 'hidden', // Ensures content doesn't spill out when width is 0px
         backgroundColor: '#3a3a3b', // Optional: Adds background color to visualize the side menu
+        height: '100%',
       }}
     >
-      <Box>
-        <Stack sx={{ minWidth: '250px', borderBottom: '1px dashed #212121' }} p={2} alignItems="center">
+      <Box className="scrollbarForSideMenubar" sx={{ height: '100%', overflowY: 'scroll', overflowX: 'hidden' }}>
+        <Stack sx={{ minWidth: '250px', borderBottom: '1px dashed rgb(175, 175, 175)' }} p={2} alignItems="center">
           <Typography sx={{ fontSize: '18px !important', fontWeight: '600' }}>JavaScript</Typography>
         </Stack>
         {itemsOfJavascript.map((item, index) => {
           if (['javascript_fundamentals', 'objects_the_basics'].includes(item?.value)) {
             return (
               <Stack
-                sx={{ minWidth: '250px', borderBottom: '1px dashed #212121', borderTop: '1px dashed #212121' }}
+                key={index}
+                sx={{
+                  minWidth: '250px',
+                  borderBottom: '1px dashed rgb(175, 175, 175)',
+                  borderTop: '1px dashed rgb(175, 175, 175)',
+                }}
                 p={2}
                 alignItems="center"
               >
