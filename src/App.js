@@ -1,6 +1,8 @@
-import { Box } from '@mui/material';
-import { Route, Routes } from 'react-router-dom';
-import { routes } from './routes/routes';
+import { Box, Stack } from '@mui/material';
+import { useState } from 'react';
+import Layout from './pages/Layout';
+import SideMenuList from './pages/SideMenuList';
+import Topbar from './pages/Topbar';
 // import CodeComponent from './components/CodeComponent';
 // import Artical from './components/PlainText';
 // import UnorderList from './components/UnorderList';
@@ -33,8 +35,9 @@ import { routes } from './routes/routes';
 // `;
 
 function App() {
+  const [open, setOpen] = useState(false);
   return (
-    <Box pb={5} className="App">
+    <Box className="App">
       {/* <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <Artical />
         <UnorderList />
@@ -46,11 +49,13 @@ function App() {
       <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}>
         <CodeComponent code={python} language="python" title="Python" />
       </Box> */}
-      <Routes>
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} element={route.component} />
-        ))}
-      </Routes>
+      <Stack direction="row" sx={{ height: '100vh' }}>
+        <SideMenuList open={open} />
+        <Stack flex={1}>
+          <Topbar setOpen={() => setOpen((prev) => !prev)} />
+          <Layout />
+        </Stack>
+      </Stack>
     </Box>
   );
 }

@@ -12,6 +12,8 @@ function ThemeContext({ children }) {
       typography: {
         allVariants: {
           color: '#ECECEC',
+          fontFamily: 'Inter, sans-serif',
+          fontSize: '14px',
         },
       },
     });
