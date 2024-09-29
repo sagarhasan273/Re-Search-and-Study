@@ -1,6 +1,7 @@
 import { Box, Button, Stack, styled, Typography } from '@mui/material';
 import React from 'react';
 import { itemsOfJavascript } from '../../MenuList/itemsOfJavascript';
+import { useGlobalContext } from '../../context/GlobalContext';
 
 const CustomButton = styled(Button)({
   textTransform: 'capitalize',
@@ -11,6 +12,13 @@ const CustomButton = styled(Button)({
 });
 
 function SideMenuList({ open }) {
+  const { dispatch } = useGlobalContext();
+
+  const handleClickMenu = (e, item) => {
+    e.stopPropagation();
+    dispatch({ type: 'add', tabValue: item?.value, tabLabel: item?.label });
+  };
+
   return (
     <Box
       sx={{
@@ -44,7 +52,7 @@ function SideMenuList({ open }) {
           }
           return (
             <Stack sx={{ minWidth: '250px' }} key={index}>
-              <CustomButton disableRipple>
+              <CustomButton onClick={(e) => handleClickMenu(e, item)} disableRipple>
                 <Typography>{item.label}</Typography>
               </CustomButton>
             </Stack>
