@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useReducer } from 'react';
+import { createContext, useContext, useMemo, useReducer, useState } from 'react';
 
 const initialState = [];
 
@@ -20,10 +20,13 @@ const Context = createContext();
 
 function GlobalContext({ children }) {
   const [state, dispatch] = useReducer(tabReducer, initialState);
+  const [sideBarOpen, setSideBarOpen] = useState(false);
 
   const value = useMemo(() => ({
     state,
     dispatch,
+    sideBarOpen,
+    setSideBarOpen,
   }));
 
   return <Context.Provider value={value}>{children}</Context.Provider>;

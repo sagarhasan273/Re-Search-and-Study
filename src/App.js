@@ -1,17 +1,17 @@
 import { Box, Stack } from '@mui/material';
-import { useState } from 'react';
+import { useGlobalContext } from './context/GlobalContext';
 import Layout from './pages/Layout';
 import SideMenuList from './pages/SideMenuList';
 import Topbar from './pages/Topbar';
 
 function App() {
-  const [open, setOpen] = useState(false);
+  const { sideBarOpen, setSideBarOpen } = useGlobalContext();
   return (
     <Box className="App">
       <Stack direction="row" sx={{ height: '100vh' }}>
-        <SideMenuList open={open} />
+        <SideMenuList open={sideBarOpen} />
         <Stack flex={1}>
-          <Topbar setOpen={() => setOpen((prev) => !prev)} />
+          <Topbar setOpen={() => setSideBarOpen((prev) => !prev)} />
           <Layout />
         </Stack>
       </Stack>

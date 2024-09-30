@@ -12,11 +12,12 @@ const CustomButton = styled(Button)({
 });
 
 function SideMenuList({ open }) {
-  const { dispatch } = useGlobalContext();
+  const { dispatch, setSideBarOpen } = useGlobalContext();
 
   const handleClickMenu = (e, item) => {
     e.stopPropagation();
     dispatch({ type: 'add', tabValue: item?.value, tabLabel: item?.label });
+    setSideBarOpen(false);
   };
 
   return (

@@ -40,9 +40,6 @@ function JavaScriptDoc() {
         <CodeComponent code={code} language="javascript" />
         <CodeComponent code={python} language="python" title="Python" />
       </Box>
-
-      <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}></Box>
-      <Box sx={{ width: '700px', margin: 'auto', mt: 10 }}></Box>
     </Box>
   );
 }
