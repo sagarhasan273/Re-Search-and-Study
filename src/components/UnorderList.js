@@ -3,17 +3,11 @@ import { Stack } from '@mui/material';
 import React from 'react';
 import PlainText from './PlainText';
 
-function UnorderList({ plainText, listTitle, listTitleText }) {
+function UnorderList({ children }) {
   return (
-    <Stack sx={{ color: '#ECECEC', lineHeight: 1.6 }} gap={2}>
-      {plainText || null}
-      {listTitle}
-      {listTitleText}
-
-      <Stack direction="row" gap={2}>
-        <FiberManualRecordIcon sx={{ width: 10, height: 10, position: 'relative', top: '7px', left: '5px' }} />
-        <PlainText />
-      </Stack>
+    <Stack direction="row" sx={{ color: '#ECECEC', lineHeight: 1.6, fontSize: '16px', fontWeight: 400 }} gap={2}>
+      <FiberManualRecordIcon sx={{ width: 10, height: 10, position: 'relative', top: '8px' }} />
+      <PlainText>{children}</PlainText>
     </Stack>
   );
 }

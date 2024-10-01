@@ -25,7 +25,7 @@ export default function CodeComponent({ code, language, title = 'Javascript.js' 
   }, [isCopied]);
 
   return (
-    <Stack sx={{ background: '#2F2F2F', borderRadius: '5px' }}>
+    <Stack mb="10px" sx={{ background: '#2F2F2F', borderRadius: '5px' }}>
       <Stack sx={{ flexDirection: 'row', justifyContent: 'space-between', p: '5px 10px' }} alignItems="center">
         <Typography sx={{ color: '#dbdbdb' }}>{title}</Typography>
         {!isCopied ? (
@@ -63,7 +63,7 @@ export default function CodeComponent({ code, language, title = 'Javascript.js' 
         )}
       </Stack>
       <Stack className="javascript_code">
-        <SyntaxHighlighter language={language} style={okaidia}>
+        <SyntaxHighlighter language={language} style={okaidia} customStyle={{ fontSize: '16px' }}>
           {code}
         </SyntaxHighlighter>
       </Stack>
