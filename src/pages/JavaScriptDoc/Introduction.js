@@ -118,6 +118,7 @@ function Introduction() {
           Dynamic Content: Fetch data from a server and update the page without reloading it (this is often done using
           AJAX or fetch API).
         </UnorderList>
+        <Divider />
       </Stack>
     </Box>
   );
