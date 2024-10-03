@@ -119,6 +119,20 @@ function Introduction() {
           AJAX or fetch API).
         </UnorderList>
         <Divider />
+        <Title>JavaScript in Modern Development</Title>
+        <PlainText>
+          JavaScript is widely used today not only in the browser but also on the server-side and for mobile
+          development. Some of the popular tools and frameworks built around JavaScript include:
+        </PlainText>
+        <UnorderList>
+          React: A library for building user interfaces, especially single-page applications (SPAs).
+        </UnorderList>
+        <UnorderList>Vue.js: A progressive JavaScript framework used to build interactive web interfaces.</UnorderList>
+        <UnorderList>
+          Node.js: A server-side platform that allows you to run JavaScript outside the browser.
+        </UnorderList>
+        <UnorderList>Express: A web application framework for Node.js used to build web servers and APIs.</UnorderList>
+        <UnorderList>Angular: A full-fledged web application framework maintained by Google.</UnorderList>
       </Stack>
     </Box>
   );
