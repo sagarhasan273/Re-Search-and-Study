@@ -105,6 +105,19 @@ function Introduction() {
           When you click the button, the JavaScript function <HlText>changeGreeting()</HlText> runs, and the text of the
           heading (<HlText>h1</HlText>) changes to "Hello, JavaScript!".
         </UnorderList>
+        <Title>JavaScript and the Web</Title>
+        <PlainText>
+          JavaScript's power shines when it's used in web browsers to manipulate the DOM (Document Object Model). The
+          DOM is the structured representation of the webpage's HTML, and JavaScript can be used to modify it
+          dynamically, based on user interaction or other events.
+        </PlainText>
+        <PlainText>For example:</PlainText>
+        <UnorderList>Form Validation: Check if a form is correctly filled out before submitting it.</UnorderList>
+        <UnorderList>Event Handling: React to events like clicks, mouse movements, or key presses.</UnorderList>
+        <UnorderList>
+          Dynamic Content: Fetch data from a server and update the page without reloading it (this is often done using
+          AJAX or fetch API).
+        </UnorderList>
       </Stack>
     </Box>
   );
