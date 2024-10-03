@@ -133,6 +133,7 @@ function Introduction() {
         </UnorderList>
         <UnorderList>Express: A web application framework for Node.js used to build web servers and APIs.</UnorderList>
         <UnorderList>Angular: A full-fledged web application framework maintained by Google.</UnorderList>
+        <Divider />
       </Stack>
     </Box>
   );
