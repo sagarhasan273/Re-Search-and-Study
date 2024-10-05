@@ -2,6 +2,7 @@ import { Box, Button, Stack, styled, Typography } from '@mui/material';
 import React from 'react';
 import { itemsOfJavascript } from '../../MenuList/itemsOfJavascript';
 import { useGlobalContext } from '../../context/GlobalContext';
+import { elementList } from './JavaScriptMenuList/elementList';
 
 const CustomButton = styled(Button)({
   textTransform: 'capitalize',
@@ -16,7 +17,13 @@ function SideMenuList({ open }) {
 
   const handleClickMenu = (e, item) => {
     e.stopPropagation();
-    dispatch({ type: 'add', tabValue: item?.value, tabLabel: item?.label });
+    dispatch({
+      type: 'add',
+      tabValue: item?.value,
+      tabLabel: item?.label,
+      element: elementList[item?.value],
+      isSelected: true,
+    });
     setSideBarOpen(false);
   };
 

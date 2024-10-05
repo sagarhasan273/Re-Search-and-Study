@@ -8,7 +8,9 @@ const tabReducer = (state, action) => {
       if (state.some((item) => item?.tabValue === action?.tabValue)) {
         return state;
       }
-      return [...state, { ...action }];
+      return [...state.map((item) => ({ ...item, isSelected: false })), { ...action }];
+    case 'selected':
+      return state.map((item) => ({ ...item, isSelected: action?.tabValue === item?.tabValue }));
     case 'delete':
       return state.filter((item) => item?.tabValue !== action?.deleteTab);
     default:
