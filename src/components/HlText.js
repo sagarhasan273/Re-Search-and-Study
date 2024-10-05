@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CustomTypography = {
+const styleHighLight = {
   backgroundColor: '#424242',
   padding: '3px',
   paddingLeft: '5px',
@@ -9,7 +9,7 @@ const CustomTypography = {
 };
 
 function HlText({ children }) {
-  return <span style={CustomTypography}>{children}</span>;
+  return <span style={styleHighLight}>{children}</span>;
 }
 
 export default HlText;

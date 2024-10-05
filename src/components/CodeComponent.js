@@ -63,7 +63,7 @@ export default function CodeComponent({ code, language, title = 'Javascript.js' 
         )}
       </Stack>
       <Stack className="javascript_code">
-        <SyntaxHighlighter language={language} style={okaidia} customStyle={{ fontSize: '16px' }}>
+        <SyntaxHighlighter language={language} style={okaidia} customStyle={{ fontSize: '14px' }}>
           {code}
         </SyntaxHighlighter>
       </Stack>
