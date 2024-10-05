@@ -4,7 +4,7 @@ import { useGlobalContext } from '../../context/GlobalContext';
 
 function JavaScriptDoc() {
   const { state } = useGlobalContext();
-  const page = state.filter((item) => item?.isSelected)?.[0];
+  const page = state?.filter((item) => item?.isSelected)?.[0];
   return (
     <Box className="stylishScrollbar" sx={{ overflowY: 'scroll', height: '100%', pb: '40px' }}>
       {page?.element}

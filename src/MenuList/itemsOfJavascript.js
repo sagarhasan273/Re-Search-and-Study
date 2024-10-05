@@ -13,7 +13,7 @@ export const itemsOfJavascript = [
   },
   {
     label: 'Use strict',
-    value: 'use_strint',
+    value: 'use_strict',
   },
   {
     label: 'Variables',

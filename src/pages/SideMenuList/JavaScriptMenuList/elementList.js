@@ -1,9 +1,9 @@
 import CodeStructure from '../../JavaScriptDoc/CodeStructure';
 import Introduction from '../../JavaScriptDoc/Introduction';
-import UseStrint from '../../JavaScriptDoc/UseStrint';
+import UseStrict from '../../JavaScriptDoc/UseStrict';
 
 export const elementList = {
   introduction: <Introduction />,
   code_structure: <CodeStructure />,
-  use_strint: <UseStrint />,
+  use_strict: <UseStrict />,
 };
