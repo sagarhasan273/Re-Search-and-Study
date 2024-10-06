@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Re-Search-and-Study/static/css/main.815a136a.css",
+    "main.js": "/Re-Search-and-Study/static/js/main.8807ee84.js",
+    "static/media/studying.png": "/Re-Search-and-Study/static/media/studying.54461162c359793732de.png",
+    "index.html": "/Re-Search-and-Study/index.html",
+    "main.815a136a.css.map": "/Re-Search-and-Study/static/css/main.815a136a.css.map",
+    "main.8807ee84.js.map": "/Re-Search-and-Study/static/js/main.8807ee84.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.815a136a.css",
+    "static/js/main.8807ee84.js"
+  ]
+}
