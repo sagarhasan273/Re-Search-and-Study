@@ -5,6 +5,7 @@ import Tabs from './Tabs';
 
 function TopBarTabs() {
   const { state } = useGlobalContext();
+
   return (
     <Stack
       className="stylishScrollbar"

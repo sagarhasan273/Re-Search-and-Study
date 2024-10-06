@@ -7,7 +7,7 @@ import TopBarTabs from './TopBarTabs';
 
 function Topbar({ setOpen }) {
   const location = useLocation();
-  console.log(location);
+
   return (
     <Stack
       direction="row"

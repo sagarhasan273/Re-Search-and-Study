@@ -1,7 +1,8 @@
 import { Box, Stack } from '@mui/material';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useGlobalContext } from './context/GlobalContext';
+import { validUrlInHome } from './helpers/validUrl';
 import Layout from './pages/Layout';
 import SideMenuList from './pages/SideMenuList';
 import Topbar from './pages/Topbar';
@@ -9,13 +10,21 @@ import Topbar from './pages/Topbar';
 function App() {
   const { sideBarOpen, setSideBarOpen } = useGlobalContext();
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    navigate('/home', {
-      state: {
-        pageName: 'home',
-      },
-    });
+    if (validUrlInHome?.includes(location?.state?.pageName)) {
+      navigate(location?.pathname, {
+        state: {
+          ...(location?.state || {}),
+        },
+      });
+    } else
+      navigate('/home', {
+        state: {
+          pageName: 'home',
+        },
+      });
   }, []);
 
   return (

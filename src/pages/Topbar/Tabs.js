@@ -15,11 +15,14 @@ const CustomButton = styled(Button)({
 function Tabs({ item }) {
   const { dispatch } = useGlobalContext();
 
-  const deleteTabsHandle = () => {
+  const deleteTabsHandle = (event) => {
+    event.stopPropagation();
+    console.log('hwllo delete');
     dispatch({ ...item, type: 'delete', deleteTab: item?.tabValue });
   };
 
   const handleActive = () => {
+    console.log('hwllo active');
     dispatch({ ...item, type: 'selected', tabValue: item?.tabValue, element: elementList[item?.tabValue] });
   };
 
@@ -39,9 +42,9 @@ function Tabs({ item }) {
         userSelect: 'none',
         ...(item?.isSelected
           ? {
-              border: '1px solid white',
+              border: '1px solid rgb(256, 256, 256)',
             }
-          : { border: '1px solid #1976d2' }),
+          : { border: '1px solid rgb(207, 206, 206, 0.5)' }),
       }}
       direction="row"
       justifyContent="space-between"
@@ -53,7 +56,7 @@ function Tabs({ item }) {
         sx={{
           fontSize: '12px !important',
           whiteSpace: 'nowrap',
-          ...(item?.isSelected ? { color: 'white' } : { color: '#1976d2' }),
+          ...(item?.isSelected ? { color: 'white' } : { color: 'rgb(207, 206, 206, 0.5)' }),
         }}
       >
         {item?.tabLabel}
@@ -65,7 +68,7 @@ function Tabs({ item }) {
           width: '20px',
           minWidth: '20px',
           p: 0,
-          ...(item?.isSelected ? { color: 'white' } : { color: '#1976d2' }),
+          ...(item?.isSelected ? { color: 'white' } : { color: 'rgb(207, 206, 206, 0.5)' }),
         }}
         disableRipple
       >
