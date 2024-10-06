@@ -1,0 +1,56 @@
+/* Container Styles */
+.card-container {
+    height: 16em;
+    width: 20em;
+    border: 2px solid rgba(137, 136, 138, 0.5);
+    border-radius: 1.5em;
+    background: linear-gradient(to bottom right, #1976d2, rgba(110, 109, 109, 0));
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75em;
+    backdrop-filter: blur(12px);
+  }
+  
+  /* Heading Styles */
+  .card-heading {
+    font-size: 2em;
+    font-weight: 500;
+  }
+  
+  /* Paragraph Styles */
+  .card-paragraph {
+    font-size: 0.85em;
+  }
+  
+  /* Button Styles */
+  .card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.25em 1em;
+    border: 1px solid white;
+    border-radius: 9999px; /* full-rounded */
+    background-color: transparent;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+  }
+  
+  /* .card-button:hover {
+    transform: translate(0.125em);
+  } */
+  
+  .card-button-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+  /* .card-button:hover .card-button-icon {
+
+  } */
+  
