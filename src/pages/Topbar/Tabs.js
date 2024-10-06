@@ -17,12 +17,10 @@ function Tabs({ item }) {
 
   const deleteTabsHandle = (event) => {
     event.stopPropagation();
-    console.log('hwllo delete');
     dispatch({ ...item, type: 'delete', deleteTab: item?.tabValue });
   };
 
   const handleActive = () => {
-    console.log('hwllo active');
     dispatch({ ...item, type: 'selected', tabValue: item?.tabValue, element: elementList[item?.tabValue] });
   };
 
