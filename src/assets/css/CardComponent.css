@@ -42,9 +42,9 @@
     cursor: pointer;
   }
   
-  /* .card-button:hover {
-    transform: translate(0.125em);
-  } */
+  .card-button:hover {
+    background-color: rgb(238, 238, 238);
+  }
   
   .card-button-icon {
     width: 1.5em;

@@ -2,7 +2,7 @@ import { Stack } from '@mui/material';
 import React from 'react';
 import '../assets/css/CardComponent.css'; // Assuming you're importing a separate CSS file
 
-function CardComponent({ heading, para, buttonText = 'Go' }) {
+function CardComponent({ onClick, heading, para, buttonText = 'Go' }) {
   return (
     <div className="card-container">
       <Stack gap={2}>
@@ -10,7 +10,7 @@ function CardComponent({ heading, para, buttonText = 'Go' }) {
         <p className="card-paragraph">{para}</p>
       </Stack>
 
-      <button type="button" className="card-button">
+      <button type="button" className="card-button" onClick={onClick}>
         <p>{buttonText}</p>
         <svg className="card-button-icon" strokeWidth="1.5" viewBox="0 0 24 24">
           <path

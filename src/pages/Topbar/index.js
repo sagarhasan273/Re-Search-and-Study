@@ -1,10 +1,13 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar, Box, Button, Stack } from '@mui/material';
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import profile_dp from '../../assets/icons/studying.png';
 import TopBarTabs from './TopBarTabs';
 
 function Topbar({ setOpen }) {
+  const location = useLocation();
+  console.log(location);
   return (
     <Stack
       direction="row"
@@ -18,6 +21,7 @@ function Topbar({ setOpen }) {
             '&:hover': {
               backgroundColor: 'transparent',
             },
+            ...(location?.state?.pageName === 'home' && { display: 'none' }),
           }}
           onClick={setOpen}
           disableRipple
