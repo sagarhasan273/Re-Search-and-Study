@@ -1,7 +1,7 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar, Box, Button, Stack } from '@mui/material';
 import React from 'react';
-import profile_dp from '../../assets/images/profile_dp.jpg';
+import profile_dp from '../../assets/icons/studying.png';
 import TopBarTabs from './TopBarTabs';
 
 function Topbar({ setOpen }) {
