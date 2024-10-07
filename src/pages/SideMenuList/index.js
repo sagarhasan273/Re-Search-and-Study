@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useGlobalContext } from '../../context/GlobalContext';
 import { menuTitleOption, menuTypeOption } from './helper';
@@ -22,6 +22,12 @@ function SideMenuList({ open }) {
     });
     setSideBarOpen(false);
   };
+
+  useEffect(() => {
+    if (location?.state?.pageName === 'home') {
+      setSideBarOpen(false);
+    }
+  }, [location]);
 
   return (
     <Box
