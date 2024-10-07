@@ -18,7 +18,9 @@ function Topbar({ setOpen }) {
       <Stack direction="row">
         <Button
           sx={{
+            color: '#cfcfcf',
             '&:hover': {
+              color: 'white',
               backgroundColor: 'transparent',
             },
             ...(location?.state?.pageName === 'home' && { display: 'none' }),
