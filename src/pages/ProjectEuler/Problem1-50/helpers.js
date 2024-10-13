@@ -22,3 +22,26 @@ while (b <= 4000000) {
 
 console.log("The sum of even Fibonacci numbers below 4 million is:", sum);
 `;
+
+export const problem3_javascript = `let number = 600851475143;
+let largestPrime = 2;
+
+while (number % 2 === 0) {
+  number /= 2;
+}
+
+// Check for odd factors starting from 3
+for (let i = 3; i <= Math.sqrt(number); i += 2) {
+  while (number % i === 0) {
+    largestPrime = i;
+    number /= i;
+  }
+}
+
+// If number is still greater than 2, then it is a prime factor
+if (number > 2) {
+  largestPrime = number;
+}
+
+console.log("The largest prime factor is:", largestPrime);
+`;
