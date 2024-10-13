@@ -2,7 +2,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Button, Stack, styled, Typography } from '@mui/material';
 import React from 'react';
 import { useGlobalContext } from '../../context/GlobalContext';
-import { elementList } from '../SideMenuList/JavaScriptMenuList/elementList';
 
 const CustomButton = styled(Button)({
   textTransform: 'capitalize',
@@ -21,7 +20,7 @@ function Tabs({ item }) {
   };
 
   const handleActive = () => {
-    dispatch({ ...item, type: 'selected', tabValue: item?.tabValue, element: elementList[item?.tabValue] });
+    dispatch({ ...item, type: 'selected', tabValue: item?.tabValue });
   };
 
   return (

@@ -1,7 +1,12 @@
+import CodeStructure from '../pages/JavaScriptDoc/CodeStructure';
+import Introduction from '../pages/JavaScriptDoc/Introduction';
+import UseStrict from '../pages/JavaScriptDoc/UseStrict';
+
 export const itemsOfJavascript = [
   {
     label: 'Introduction',
     value: 'introduction',
+    element: <Introduction />,
   },
   {
     label: 'JavaScript Fundamentals',
@@ -10,10 +15,12 @@ export const itemsOfJavascript = [
   {
     label: 'Code structure',
     value: 'code_structure',
+    element: <CodeStructure />,
   },
   {
     label: 'Use strict',
     value: 'use_strict',
+    element: <UseStrict />,
   },
   {
     label: 'Variables',

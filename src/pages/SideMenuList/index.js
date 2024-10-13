@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useGlobalContext } from '../../context/GlobalContext';
 import { menuTitleOption, menuTypeOption } from './helper';
-import { elementList } from './JavaScriptMenuList/elementList';
 import SideMenuItems from './SideMenuItems';
 
 function SideMenuList({ open }) {
@@ -17,7 +16,7 @@ function SideMenuList({ open }) {
       type: 'add',
       tabValue: item?.value,
       tabLabel: item?.label,
-      element: elementList[item?.value],
+      element: item?.element,
       isSelected: true,
     });
     setSideBarOpen(false);
