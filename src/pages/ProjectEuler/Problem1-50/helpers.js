@@ -45,3 +45,22 @@ if (number > 2) {
 
 console.log("The largest prime factor is:", largestPrime);
 `;
+
+export const problem4_javascript = `function isPalindrome(num) {
+  let str = num.toString();
+  return str === str.split('').reverse().join('');
+}
+
+let largestPalindrome = 0;
+
+for (let i = 999; i >= 100; i--) {
+  for (let j = i; j >= 100; j--) {
+    let product = i * j;
+    if (isPalindrome(product) && product > largestPalindrome) {
+      largestPalindrome = product;
+    }
+  }
+}
+
+console.log("The largest palindrome made from the product of two 3-digit numbers is:", largestPalindrome);
+`;
