@@ -2,13 +2,14 @@ import Problem1 from '../pages/ProjectEuler/Problem1-50/Problem1';
 import Problem2 from '../pages/ProjectEuler/Problem1-50/Problem2';
 import Problem3 from '../pages/ProjectEuler/Problem1-50/Problem3';
 import Problem4 from '../pages/ProjectEuler/Problem1-50/Problem4';
+import Problem5 from '../pages/ProjectEuler/Problem1-50/Problem5';
 
 export const itemsOfProjectEuler = [
   { label: '1. Multiples of 3 or 5', value: 'problem_1', element: <Problem1 /> },
   { label: '2. Even Fibonacci Numbers', value: 'problem_2', element: <Problem2 /> },
   { label: '3. Largest Prime Factor', value: 'problem_3', element: <Problem3 /> },
   { label: '4. Largest Palindrome Product', value: 'problem_4', element: <Problem4 /> },
-  { label: '5. Smallest Multiple', value: 'problem_5' },
+  { label: '5. Smallest Multiple', value: 'problem_5', element: <Problem5 /> },
   { label: '6. Sum Square Difference', value: 'problem_6' },
   { label: '7. 10001st Prime', value: 'problem_7' },
   { label: '8. Largest Product in a Series', value: 'problem_8' },

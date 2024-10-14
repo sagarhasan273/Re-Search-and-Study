@@ -9,8 +9,8 @@ function ProjectEulerBaseContainer({ children, problem }) {
   return (
     <BaseContainer>
       <Title>Project Euler</Title>
-      <Divider />
       <Title>{problem}</Title>
+      <Divider />
       {children}
       <Stack padding={5} alignItems="center">
         <PlainText>-------------- Happy coding! 😊 --------------</PlainText>

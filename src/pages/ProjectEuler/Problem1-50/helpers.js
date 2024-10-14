@@ -64,3 +64,25 @@ for (let i = 999; i >= 100; i--) {
 
 console.log("The largest palindrome made from the product of two 3-digit numbers is:", largestPalindrome);
 `;
+
+export const problem5_javascript = `function gcd(a, b) {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
+let smallestMultiple = 1;
+
+for (let i = 2; i <= 20; i++) {
+  smallestMultiple = lcm(smallestMultiple, i);
+}
+
+console.log("The smallest multiple of numbers from 1 to 20 is:", smallestMultiple);
+`;
