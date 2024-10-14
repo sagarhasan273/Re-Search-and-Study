@@ -5,7 +5,7 @@ import projectEuler from '../../assets/images/projecteuler.png';
 function ProjectEulerHome() {
   return (
     <Stack alignItems="center">
-      <Stack sx={{ width: '700px', height: '50vh' }} justifyContent="center">
+      <Stack sx={{ width: '500px', height: '50vh' }} justifyContent="center">
         <img alt="Project Euler" src={projectEuler} />
       </Stack>
     </Stack>
