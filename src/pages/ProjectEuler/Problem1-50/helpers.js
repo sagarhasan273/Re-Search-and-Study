@@ -86,3 +86,43 @@ for (let i = 2; i <= 20; i++) {
 
 console.log("The smallest multiple of numbers from 1 to 20 is:", smallestMultiple);
 `;
+
+export const problem6_javascript = `let n = 100;
+
+// Sum of squares formula
+let sumOfSquares = (n * (n + 1) * (2 * n + 1)) / 6;
+
+// Square of the sum formula
+let sum = (n * (n + 1)) / 2;
+let squareOfSum = sum * sum;
+
+// Difference
+let difference = squareOfSum - sumOfSquares;
+
+console.log("The difference between the square of the sum and the sum of the squares is:", difference);
+`;
+
+export const problem7_javascript = `function isPrime(num) {
+  if (num < 2) return false;
+  for (let i = 2; i * i <= num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+function findNthPrime(n) {
+  let count = 0;
+  let num = 1;
+  
+  while (count < n) {
+    num++;
+    if (isPrime(num)) {
+      count++;
+    }
+  }
+  
+  return num;
+}
+
+console.log("The 10001st prime number is:", findNthPrime(10001));
+`;

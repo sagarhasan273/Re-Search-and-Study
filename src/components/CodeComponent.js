@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-export default function CodeComponent({ code, language, title = 'Javascript.js' }) {
+export default function CodeComponent({ code, language = 'javascript', title = 'JavaScript.js' }) {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyToClipboard = () => {

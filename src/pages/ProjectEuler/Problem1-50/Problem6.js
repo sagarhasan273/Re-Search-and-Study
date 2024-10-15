@@ -1,12 +1,16 @@
 import { Stack, Typography } from '@mui/material';
 import React from 'react';
-import sum from '../../../assets/project euler/sum.png';
-import sum_of_squares from '../../../assets/project euler/sum_of_squares.png';
+import square_of_sum from '../../../assets/project euler/problem6/square_of_sum.png';
+import sum from '../../../assets/project euler/problem6/sum.png';
+import sum_of_squares from '../../../assets/project euler/problem6/sum_of_squares.png';
 import CentralImage from '../../../components/CentralImage';
+import CentralText from '../../../components/CentralText';
+import CodeComponent from '../../../components/CodeComponent';
 import OrderList from '../../../components/OrderedList';
 import PlainText from '../../../components/PlainText';
 import Title from '../../../components/Title';
 import ProjectEulerBaseContainer from '../@common/ProjectEulerBaseContainer';
+import { problem6_javascript } from './helpers';
 
 function Problem6() {
   return (
@@ -53,8 +57,35 @@ function Problem6() {
       <Title>Step-by-Step Approach:</Title>
       <OrderList num={1}>Sum of Squares:</OrderList>
       <PlainText>The sum of squares of the first n natural numbers can be computed using the formula:</PlainText>
-      <CentralImage alt="Sum" src={sum} />
       <CentralImage alt="Sum" src={sum_of_squares} />
+      <PlainText>For n = 100, this formula gives the sum of squares of the first 100 natural numbers.</PlainText>
+      <OrderList num={2}>Square of the Sum:</OrderList>
+      <PlainText>The sum of the first n natural numbers is:</PlainText>
+      <CentralImage alt="Sum" src={sum} />
+      <PlainText>The square of the sum is then:</PlainText>
+      <CentralImage alt="Sum" src={square_of_sum} />
+      <OrderList num={3}>3. Difference:</OrderList>
+      <PlainText>The difference is:</PlainText>
+      <CentralText>Difference = Square of sum - Sum of squares</CentralText>
+      <Title>JavaScript Code:</Title>
+      <CodeComponent code={problem6_javascript} />
+      <Title>Explanation:</Title>
+      <OrderList num={1}>
+        Sum of squares: We calculate the sum of squares of the first 100 numbers using the formula.
+      </OrderList>
+      <OrderList num={2}>
+        Square of sum: First, we calculate the sum of the first 100 numbers and then square the result.
+      </OrderList>
+      <OrderList num={3}>
+        Difference: The difference between the square of the sum and the sum of the squares is computed and printed.
+      </OrderList>
+      <Title>Output:</Title>
+      <PlainText>For the first 100 natural numbers, the result is:</PlainText>
+      <CodeComponent
+        code={`The difference between the square of the sum and the sum of the squares is: 25164150
+`}
+      />
+      <PlainText>This result is the correct answer to Problem 6 of Project Euler.</PlainText>
     </ProjectEulerBaseContainer>
   );
 }
