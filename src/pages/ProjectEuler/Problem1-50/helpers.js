@@ -166,3 +166,30 @@ for (let a = 1; a < 1000 / 3; a++) {
 
 console.log("The product of the Pythagorean triplet is:", product);
 `;
+
+export const problem10_javascript = `
+function sumOfPrimes(limit) {
+  let sieve = new Array(limit).fill(true);
+  sieve[0] = sieve[1] = false; // 0 and 1 are not prime numbers
+
+  for (let p = 2; p * p <= limit; p++) {
+    if (sieve[p]) {
+      for (let multiple = p * p; multiple < limit; multiple += p) {
+        sieve[multiple] = false;
+      }
+    }
+  }
+
+  let sum = 0;
+  for (let i = 2; i < limit; i++) {
+    if (sieve[i]) {
+      sum += i;
+    }
+  }
+
+  return sum;
+}
+
+const result = sumOfPrimes(2000000);
+console.log("The sum of all primes below two million is:", result);
+`;
