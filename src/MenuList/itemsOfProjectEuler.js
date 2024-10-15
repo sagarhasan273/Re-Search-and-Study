@@ -1,8 +1,18 @@
 import Problem1 from '../pages/ProjectEuler/Problem1-50/Problem1';
+import Problem10 from '../pages/ProjectEuler/Problem1-50/Problem10';
+import Problem11 from '../pages/ProjectEuler/Problem1-50/Problem11';
+import Problem12 from '../pages/ProjectEuler/Problem1-50/Problem12';
+import Problem13 from '../pages/ProjectEuler/Problem1-50/Problem13';
+import Problem14 from '../pages/ProjectEuler/Problem1-50/Problem14';
+import Problem15 from '../pages/ProjectEuler/Problem1-50/Problem15';
 import Problem2 from '../pages/ProjectEuler/Problem1-50/Problem2';
 import Problem3 from '../pages/ProjectEuler/Problem1-50/Problem3';
 import Problem4 from '../pages/ProjectEuler/Problem1-50/Problem4';
 import Problem5 from '../pages/ProjectEuler/Problem1-50/Problem5';
+import Problem6 from '../pages/ProjectEuler/Problem1-50/Problem6';
+import Problem7 from '../pages/ProjectEuler/Problem1-50/Problem7';
+import Problem8 from '../pages/ProjectEuler/Problem1-50/Problem8';
+import Problem9 from '../pages/ProjectEuler/Problem1-50/Problem9';
 
 export const itemsOfProjectEuler = [
   { label: '1. Multiples of 3 or 5', value: 'problem_1', element: <Problem1 /> },
@@ -10,16 +20,16 @@ export const itemsOfProjectEuler = [
   { label: '3. Largest Prime Factor', value: 'problem_3', element: <Problem3 /> },
   { label: '4. Largest Palindrome Product', value: 'problem_4', element: <Problem4 /> },
   { label: '5. Smallest Multiple', value: 'problem_5', element: <Problem5 /> },
-  { label: '6. Sum Square Difference', value: 'problem_6' },
-  { label: '7. 10001st Prime', value: 'problem_7' },
-  { label: '8. Largest Product in a Series', value: 'problem_8' },
-  { label: '9. Special Pythagorean Triplet', value: 'problem_9' },
-  { label: '10. Summation of Primes', value: 'problem_10' },
-  { label: '11. Largest Product in a Grid', value: 'problem_11' },
-  { label: '12. Highly Divisible Triangular Number', value: 'problem_12' },
-  { label: '13. Large Sum', value: 'problem_13' },
-  { label: '14. Longest Collatz Sequence', value: 'problem_14' },
-  { label: '15. Lattice Paths', value: 'problem_15' },
+  { label: '6. Sum Square Difference', value: 'problem_6', element: <Problem6 /> },
+  { label: '7. 10001st Prime', value: 'problem_7', element: <Problem7 /> },
+  { label: '8. Largest Product in a Series', value: 'problem_8', element: <Problem8 /> },
+  { label: '9. Special Pythagorean Triplet', value: 'problem_9', element: <Problem9 /> },
+  { label: '10. Summation of Primes', value: 'problem_10', element: <Problem10 /> },
+  { label: '11. Largest Product in a Grid', value: 'problem_11', element: <Problem11 /> },
+  { label: '12. Highly Divisible Triangular Number', value: 'problem_12', element: <Problem12 /> },
+  { label: '13. Large Sum', value: 'problem_13', element: <Problem13 /> },
+  { label: '14. Longest Collatz Sequence', value: 'problem_14', element: <Problem14 /> },
+  { label: '15. Lattice Paths', value: 'problem_15', element: <Problem15 /> },
   { label: '16. Power Digit Sum', value: 'problem_16' },
   { label: '17. Number Letter Counts', value: 'problem_17' },
   { label: '18. Maximum Path Sum I', value: 'problem_18' },
