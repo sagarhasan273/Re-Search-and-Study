@@ -5,7 +5,12 @@ import Problem12 from '../pages/ProjectEuler/Problem1-50/Problem12';
 import Problem13 from '../pages/ProjectEuler/Problem1-50/Problem13';
 import Problem14 from '../pages/ProjectEuler/Problem1-50/Problem14';
 import Problem15 from '../pages/ProjectEuler/Problem1-50/Problem15';
+import Problem16 from '../pages/ProjectEuler/Problem1-50/Problem16';
+import Problem17 from '../pages/ProjectEuler/Problem1-50/Problem17';
+import Problem18 from '../pages/ProjectEuler/Problem1-50/Problem18';
+import Problem19 from '../pages/ProjectEuler/Problem1-50/Problem19';
 import Problem2 from '../pages/ProjectEuler/Problem1-50/Problem2';
+import Problem20 from '../pages/ProjectEuler/Problem1-50/Problem20';
 import Problem3 from '../pages/ProjectEuler/Problem1-50/Problem3';
 import Problem4 from '../pages/ProjectEuler/Problem1-50/Problem4';
 import Problem5 from '../pages/ProjectEuler/Problem1-50/Problem5';
@@ -30,11 +35,11 @@ export const itemsOfProjectEuler = [
   { label: '13. Large Sum', value: 'problem_13', element: <Problem13 /> },
   { label: '14. Longest Collatz Sequence', value: 'problem_14', element: <Problem14 /> },
   { label: '15. Lattice Paths', value: 'problem_15', element: <Problem15 /> },
-  { label: '16. Power Digit Sum', value: 'problem_16' },
-  { label: '17. Number Letter Counts', value: 'problem_17' },
-  { label: '18. Maximum Path Sum I', value: 'problem_18' },
-  { label: '19. Counting Sundays', value: 'problem_19' },
-  { label: '20. Factorial Digit Sum', value: 'problem_20' },
+  { label: '16. Power Digit Sum', value: 'problem_16', element: <Problem16 /> },
+  { label: '17. Number Letter Counts', value: 'problem_17', element: <Problem17 /> },
+  { label: '18. Maximum Path Sum I', value: 'problem_18', element: <Problem18 /> },
+  { label: '19. Counting Sundays', value: 'problem_19', element: <Problem19 /> },
+  { label: '20. Factorial Digit Sum', value: 'problem_20', element: <Problem20 /> },
   { label: '21. Amicable Numbers', value: 'problem_21' },
   { label: '22. Names Scores', value: 'problem_22' },
   { label: '23. Non-Abundant Sums', value: 'problem_23' },
