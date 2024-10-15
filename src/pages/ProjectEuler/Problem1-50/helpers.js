@@ -147,3 +147,22 @@ for (let i = 0; i <= numStr.length - 13; i++) {
 
 console.log("The greatest product of thirteen adjacent digits is:", maxProduct);
 `;
+
+export const problem9_javascript = `
+let found = false;
+let product = 0;
+
+for (let a = 1; a < 1000 / 3; a++) {
+  for (let b = a + 1; b < 1000 / 2; b++) {
+    let c = 1000 - a - b;
+    if (a * a + b * b === c * c) {
+      product = a * b * c;
+      found = true;
+      break;
+    }
+  }
+  if (found) break;
+}
+
+console.log("The product of the Pythagorean triplet is:", product);
+`;
