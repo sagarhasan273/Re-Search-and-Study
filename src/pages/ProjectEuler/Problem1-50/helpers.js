@@ -193,3 +193,110 @@ function sumOfPrimes(limit) {
 const result = sumOfPrimes(2000000);
 console.log("The sum of all primes below two million is:", result);
 `;
+
+export const problem11_javascript = `
+const grid = [
+  [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
+  [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
+  [81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 3, 49, 13, 36, 65],
+  // [ ... (rest of the grid omitted for brevity) ... ]
+  [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
+];
+
+function largestProductInGrid(grid) {
+  let maxProduct = 0;
+
+  const numRows = grid.length;
+  const numCols = grid[0].length;
+
+  // Helper to compute product of 4 numbers in the given positions
+  function getProduct(a, b, c, d) {
+    return a * b * c * d;
+  }
+
+  // Check horizontal, vertical, and diagonal products
+  for (let row = 0; row < numRows; row++) {
+    for (let col = 0; col < numCols; col++) {
+      // Horizontal
+      if (col + 3 < numCols) {
+        const product = getProduct(
+          grid[row][col],
+          grid[row][col + 1],
+          grid[row][col + 2],
+          grid[row][col + 3]
+        );
+        maxProduct = Math.max(maxProduct, product);
+      }
+
+      // Vertical
+      if (row + 3 < numRows) {
+        const product = getProduct(
+          grid[row][col],
+          grid[row + 1][col],
+          grid[row + 2][col],
+          grid[row + 3][col]
+        );
+        maxProduct = Math.max(maxProduct, product);
+      }
+
+      // Diagonal (top-left to bottom-right)
+      if (row + 3 < numRows && col + 3 < numCols) {
+        const product = getProduct(
+          grid[row][col],
+          grid[row + 1][col + 1],
+          grid[row + 2][col + 2],
+          grid[row + 3][col + 3]
+        );
+        maxProduct = Math.max(maxProduct, product);
+      }
+
+      // Diagonal (top-right to bottom-left)
+      if (row + 3 < numRows && col - 3 >= 0) {
+        const product = getProduct(
+          grid[row][col],
+          grid[row + 1][col - 1],
+          grid[row + 2][col - 2],
+          grid[row + 3][col - 3]
+        );
+        maxProduct = Math.max(maxProduct, product);
+      }
+    }
+  }
+
+  return maxProduct;
+}
+
+const result = largestProductInGrid(grid);
+console.log("The largest product of four adjacent numbers is:", result);
+`;
+
+export const problem12_javascript = `
+function countDivisors(n) {
+    let count = 0;
+    for (let i = 1; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            count += 1; // i is a divisor
+            if (i !== n / i) {
+                count += 1; // n / i is a divisor
+            }
+        }
+    }
+    return count;
+}
+
+function findTriangleNumberWithDivisors(limit) {
+    let n = 1;
+    let triangleNumber = 0;
+
+    while (true) {
+        triangleNumber = (n * (n + 1)) / 2; // Generate the nth triangle number
+        if (countDivisors(triangleNumber) > limit) {
+            return triangleNumber;
+        }
+        n++;
+    }
+}
+
+const result = findTriangleNumberWithDivisors(500);
+console.log("The first triangle number to have over 500 divisors is:", result);
+`;
