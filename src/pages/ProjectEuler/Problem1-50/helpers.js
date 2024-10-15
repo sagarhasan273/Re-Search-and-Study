@@ -126,3 +126,24 @@ function findNthPrime(n) {
 
 console.log("The 10001st prime number is:", findNthPrime(10001));
 `;
+
+export const problem8_javascript = `
+const numStr = '73167176531330624919225119674426574742355349194934...' + // rest of the 1000-digit number here
+               '...';
+
+let maxProduct = 0;
+
+for (let i = 0; i <= numStr.length - 13; i++) {
+  let product = 1;
+  
+  for (let j = 0; j < 13; j++) {
+    product *= parseInt(numStr[i + j]);
+  }
+
+  if (product > maxProduct) {
+    maxProduct = product;
+  }
+}
+
+console.log("The greatest product of thirteen adjacent digits is:", maxProduct);
+`;
