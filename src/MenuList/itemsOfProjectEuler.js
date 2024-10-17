@@ -11,6 +11,8 @@ import Problem18 from '../pages/ProjectEuler/Problem1-50/Problem18';
 import Problem19 from '../pages/ProjectEuler/Problem1-50/Problem19';
 import Problem2 from '../pages/ProjectEuler/Problem1-50/Problem2';
 import Problem20 from '../pages/ProjectEuler/Problem1-50/Problem20';
+import Problem21 from '../pages/ProjectEuler/Problem1-50/Problem21';
+import Problem22 from '../pages/ProjectEuler/Problem1-50/Problem22';
 import Problem3 from '../pages/ProjectEuler/Problem1-50/Problem3';
 import Problem4 from '../pages/ProjectEuler/Problem1-50/Problem4';
 import Problem5 from '../pages/ProjectEuler/Problem1-50/Problem5';
@@ -40,8 +42,8 @@ export const itemsOfProjectEuler = [
   { label: '18. Maximum Path Sum I', value: 'problem_18', element: <Problem18 /> },
   { label: '19. Counting Sundays', value: 'problem_19', element: <Problem19 /> },
   { label: '20. Factorial Digit Sum', value: 'problem_20', element: <Problem20 /> },
-  { label: '21. Amicable Numbers', value: 'problem_21' },
-  { label: '22. Names Scores', value: 'problem_22' },
+  { label: '21. Amicable Numbers', value: 'problem_21', element: <Problem21 /> },
+  { label: '22. Names Scores', value: 'problem_22', element: <Problem22 /> },
   { label: '23. Non-Abundant Sums', value: 'problem_23' },
   { label: '24. Lexicographic Permutations', value: 'problem_24' },
   { label: '25. 1000-digit Fibonacci Number', value: 'problem_25' },
