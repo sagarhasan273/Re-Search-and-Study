@@ -586,3 +586,63 @@ fs.readFile('p022_names.txt', 'utf8', (err, data) => {
     console.log("The total of all the name scores is:", result);
 });
 `;
+
+export const problem23_javascript = `
+const limit = 28123;
+
+// Function to find the sum of proper divisors
+function sumOfDivisors(num) {
+    let sum = 1;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            sum += i;
+            if (i !== num / i) {
+                sum += num / i;
+            }
+        }
+    }
+    return sum;
+}
+
+// Find all abundant numbers
+function getAbundantNumbers(limit) {
+    const abundantNumbers = [];
+    for (let i = 12; i <= limit; i++) {
+        if (sumOfDivisors(i) > i) {
+            abundantNumbers.push(i);
+        }
+    }
+    return abundantNumbers;
+}
+
+// Find the sum of all numbers that cannot be written as the sum of two abundant numbers
+function sumOfNonAbundantSums() {
+    const abundantNumbers = getAbundantNumbers(limit);
+    const canBeWrittenAsAbundantSum = Array(limit + 1).fill(false);
+
+    // Mark all numbers that can be written as the sum of two abundant numbers
+    for (let i = 0; i < abundantNumbers.length; i++) {
+        for (let j = i; j < abundantNumbers.length; j++) {
+            const sum = abundantNumbers[i] + abundantNumbers[j];
+            if (sum <= limit) {
+                canBeWrittenAsAbundantSum[sum] = true;
+            } else {
+                break;
+            }
+        }
+    }
+
+    // Sum all numbers that cannot be written as the sum of two abundant numbers
+    let totalSum = 0;
+    for (let i = 1; i <= limit; i++) {
+        if (!canBeWrittenAsAbundantSum[i]) {
+            totalSum += i;
+        }
+    }
+
+    return totalSum;
+}
+
+const result = sumOfNonAbundantSums();
+console.log("The sum of all non-abundant sums is:", result);
+`;
