@@ -1,49 +1,60 @@
-import { Stack, Typography } from '@mui/material';
 import React from 'react';
 import CodeComponent from '../../../components/CodeComponent';
+import OrderList from '../../../components/OrderedList';
 import PlainText from '../../../components/PlainText';
 import Title from '../../../components/Title';
 import ProjectEulerBaseContainer from '../@common/ProjectEulerBaseContainer';
-import { problem21_javascript } from './helpers';
+import { problem24_javascript } from './helpers';
 
-function Problem21() {
+function Problem24() {
   return (
-    <ProjectEulerBaseContainer problem="21. Amicable Numbers">
+    <ProjectEulerBaseContainer problem="24. Lexicographic Permutations">
       <PlainText>
-        An amicable pair consists of two numbers where each number is the sum of the proper divisors of the other. We
-        are tasked with finding the sum of all the amicable numbers under 10,000.
+        The goal of this problem is to find the millionth lexicographic permutation of the digits 0 through 9.
       </PlainText>
 
       <Title>Key Concepts:</Title>
-      <Stack>
-        <Typography>
-          Proper divisors: The divisors of a number excluding the number itself. For example, the proper divisors of 220
-          are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55, and 110.
-        </Typography>
-        <Typography>
-          Amicable numbers: Two numbers are amicable if the sum of the proper divisors of one equals the other, and vice
-          versa.
-        </Typography>
-      </Stack>
+      <OrderList num={1}>**Permutation**: A rearrangement of elements in a particular order.</OrderList>
+      <OrderList num={2}>
+        **Lexicographic Order**: The same order as alphabetical order, but applied to numbers. For example, the digits
+        0, 1, 2 would have the following lexicographic permutations: 012, 021, 102, 120, 201, 210.
+      </OrderList>
 
       <Title>Step-by-Step Approach:</Title>
-      <Stack>
-        <Typography>1. Find all divisors for each number up to 10,000.</Typography>
-        <Typography>2. Check for amicable pairs.</Typography>
-        <Typography>3. Sum all amicable numbers.</Typography>
-      </Stack>
+      <OrderList num={1}>
+        **Step 1**: We need to generate the millionth permutation of the digits 0 through 9.
+      </OrderList>
+      <OrderList num={2}>
+        **Step 2**: Instead of generating all permutations (which is inefficient), we use a mathematical approach to
+        directly find the millionth permutation by leveraging factorial values.
+      </OrderList>
 
       <Title>JavaScript Code:</Title>
-      <CodeComponent code={problem21_javascript} />
+      <CodeComponent code={problem24_javascript} />
+
+      <Title>Explanation:</Title>
+      <OrderList num={1}>
+        **Factorial Math**: The total number of permutations of a set of `n` digits is `n!`. For example, there are `3!
+        = 6` permutations of the digits 0, 1, 2. By knowing how many permutations can start with a certain digit, we can
+        directly determine which digit should be at each position of the desired permutation.
+      </OrderList>
+      <OrderList num={2}>
+        **Iterative Approach**: At each step, we determine which digit should be at the current position by calculating
+        how many permutations start with that digit.
+      </OrderList>
+      <OrderList num={3}>
+        **Factorial-based Calculation**: The factorial of remaining digits allows us to skip blocks of permutations and
+        reach the exact millionth permutation.
+      </OrderList>
 
       <Title>Output:</Title>
-      <PlainText>The sum of all amicable numbers under 10,000 is:</PlainText>
+      <PlainText>The millionth lexicographic permutation of the digits 0 through 9 is:</PlainText>
       <CodeComponent
-        code={`The sum of all amicable numbers under 10,000 is: 31626
+        code={`The millionth permutation is: 2783915460
 `}
       />
     </ProjectEulerBaseContainer>
   );
 }
 
-export default Problem21;
+export default Problem24;

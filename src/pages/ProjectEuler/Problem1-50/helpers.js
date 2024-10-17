@@ -646,3 +646,31 @@ function sumOfNonAbundantSums() {
 const result = sumOfNonAbundantSums();
 console.log("The sum of all non-abundant sums is:", result);
 `;
+
+export const problem24_javascript = `
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+}
+
+function findNthPermutation(digits, n) {
+    let result = '';
+    let numbers = [...digits];
+    let k = n - 1;
+
+    for (let i = digits.length; i > 0; i--) {
+        const fact = factorial(i - 1);
+        const index = Math.floor(k / fact);
+        result += numbers[index];
+        numbers.splice(index, 1);
+        k %= fact;
+    }
+
+    return result;
+}
+
+// Digits 0 to 9
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const millionthPermutation = findNthPermutation(digits, 1000000);
+console.log("The millionth permutation is:", millionthPermutation);
+`;
