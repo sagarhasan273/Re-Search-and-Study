@@ -516,3 +516,73 @@ function factorialDigitSum(n) {
 const result = factorialDigitSum(100);
 console.log("The sum of the digits in 100! is:", result);
 `;
+export const problem21_javascript = `
+function sumOfDivisors(num) {
+    let sum = 1;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            sum += i;
+            if (i !== num / i) {
+                sum += num / i;
+            }
+        }
+    }
+    return sum;
+}
+
+function findAmicableNumbers(limit) {
+    let sumAmicable = 0;
+    
+    for (let a = 2; a < limit; a++) {
+        let b = sumOfDivisors(a);
+        if (b > a && b < limit && sumOfDivisors(b) === a) {
+            sumAmicable += a + b;
+        }
+    }
+    
+    return sumAmicable;
+}
+
+const result = findAmicableNumbers(10000);
+console.log("The sum of all amicable numbers under 10,000 is:", result);
+`;
+
+export const problem22_javascript = `
+const fs = require('fs');
+
+// Function to calculate alphabetical value of a name
+function alphabeticalValue(name) {
+    return name
+        .toUpperCase()
+        .split('')
+        .reduce((sum, char) => sum + (char.charCodeAt(0) - 'A'.charCodeAt(0) + 1), 0);
+}
+
+// Function to calculate total name scores
+function totalNameScores(names) {
+    // Sort the names alphabetically
+    names.sort();
+
+    // Calculate the total score by summing each name's score
+    let totalScore = 0;
+
+    for (let i = 0; i < names.length; i++) {
+        const name = names[i];
+        const score = alphabeticalValue(name) * (i + 1); // Multiply by position (i+1)
+        totalScore += score;
+    }
+
+    return totalScore;
+}
+
+// Reading the names from the file
+fs.readFile('p022_names.txt', 'utf8', (err, data) => {
+    if (err) throw err;
+
+    // Removing quotes and splitting names into an array
+    const names = data.split(',').map(name => name.replace(/"/g, ''));
+
+    const result = totalNameScores(names);
+    console.log("The total of all the name scores is:", result);
+});
+`;
