@@ -77,8 +77,8 @@ function AdvanceTopics() {
         <Title>4. Asynchronous JavaScript</Title>
         <UnorderList>Callbacks and Callback Hell: How callbacks work and their downsides.</UnorderList>
         <UnorderList>
-          Promises: Creating and chaining promises, <HlText>.then()</HlText>, <HlText>.catch()</HlText>, and{' '}
-          <HlText>.finally()</HlText>.
+          <Bold>Promises</Bold>: Creating and chaining promises, <HlText>.then()</HlText>, <HlText>.catch()</HlText>,
+          and <HlText>.finally()</HlText>.
         </UnorderList>
         <UnorderList>
           Async/Await: Modern syntax for asynchronous functions, error handling, and awaiting multiple promises.
