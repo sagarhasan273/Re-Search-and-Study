@@ -26,26 +26,30 @@ function AdvanceTopics() {
           <Bold>Hoisting</Bold>: How JavaScript handles variable and function declarations.
         </UnorderList>
         <UnorderList>
-          Execution Context and Call Stack: Understanding the creation and execution phases, call stack, and stack
-          frames.
+          <Bold>Execution Context and Call Stack</Bold>: Understanding the creation and execution phases, call stack,
+          and stack frames.
         </UnorderList>
         <UnorderList>
-          <HlText>this</HlText> Keyword: Different behaviors of <HlText>this</HlText> in function, method, and arrow
-          functions, and how to control it with <HlText>.bind()</HlText>, <HlText>.call()</HlText>, and{' '}
-          <HlText>.apply()</HlText>.
+          <Bold>
+            <HlText>this</HlText> Keyword
+          </Bold>
+          : Different behaviors of <HlText>this</HlText> in function, method, and arrow functions, and how to control it
+          with <HlText>.bind()</HlText>, <HlText>.call()</HlText>, and <HlText>.apply()</HlText>.
         </UnorderList>
         <UnorderList>
-          Prototypes and Prototype Chain: Prototype inheritance, <HlText>__proto__</HlText> vs.{' '}
+          <Bold>Prototypes and Prototype Chain</Bold>: Prototype inheritance, <HlText>__proto__</HlText> vs.{' '}
           <HlText>prototype</HlText>, and the prototype chain.
         </UnorderList>
         <UnorderList>
-          <HlText>new</HlText>, <HlText>class</HlText>, and <HlText>extends</HlText>: Constructor functions, ES6{' '}
-          <HlText>class</HlText>
+          <Bold>
+            <HlText>new</HlText>, <HlText>class</HlText>, and <HlText>extends</HlText>
+          </Bold>
+          : Constructor functions, ES6 <HlText>class</HlText>
           syntax, inheritance, and extending classes.
         </UnorderList>
         <UnorderList>
-          JavaScript Modules (ES6 Modules): <HlText>import</HlText>, <HlText>export</HlText>, and module patterns
-          (CommonJS, ES6 modules, etc.).
+          <Bold>JavaScript Modules (ES6 Modules)</Bold>: <HlText>import</HlText>, <HlText>export</HlText>, and module
+          patterns (CommonJS, ES6 modules, etc.).
         </UnorderList>
         <Title>2. Object-Oriented Programming (OOP) in JavaScript</Title>
         <UnorderList>
