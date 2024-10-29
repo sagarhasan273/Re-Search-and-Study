@@ -1,8 +1,14 @@
+import AdvanceTopics from '../pages/JavaScriptDoc/AdvanceTopics';
 import CodeStructure from '../pages/JavaScriptDoc/CodeStructure';
 import Introduction from '../pages/JavaScriptDoc/Introduction';
 import UseStrict from '../pages/JavaScriptDoc/UseStrict';
 
 export const itemsOfJavascript = [
+  {
+    label: 'Advance Topics',
+    value: 'advance_topics',
+    element: <AdvanceTopics />,
+  },
   {
     label: 'Introduction',
     value: 'introduction',

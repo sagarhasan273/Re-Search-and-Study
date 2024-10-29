@@ -2,9 +2,9 @@ import React from 'react';
 
 const styleHighLight = {
   backgroundColor: '#424242',
-  padding: '3px',
-  paddingLeft: '5px',
-  paddingRight: '5px',
+  padding: '2px',
+  paddingLeft: '8px',
+  paddingRight: '6px',
   borderRadius: '5px',
 };
 
