@@ -16,7 +16,7 @@ function SideMenuItems({ items, title, onClick }) {
         <Typography sx={{ fontSize: '18px !important', fontWeight: '600' }}>{title}</Typography>
       </Stack>
       {items.map((item, index) => {
-        if (['javascript_fundamentals', 'objects_the_basics'].includes(item?.value)) {
+        if (['title_of_list'].includes(item?.value)) {
           return (
             <Stack
               key={index}

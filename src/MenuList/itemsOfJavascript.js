@@ -1,4 +1,5 @@
 import AdvanceTopics from '../pages/JavaScriptDoc/AdvanceTopics';
+import Promises from '../pages/JavaScriptDoc/Asynchronous/Promises';
 import CodeStructure from '../pages/JavaScriptDoc/CodeStructure';
 import Introduction from '../pages/JavaScriptDoc/Introduction';
 import UseStrict from '../pages/JavaScriptDoc/UseStrict';
@@ -16,7 +17,7 @@ export const itemsOfJavascript = [
   },
   {
     label: 'JavaScript Fundamentals',
-    value: 'javascript_fundamentals',
+    value: 'title_of_list',
   },
   {
     label: 'Code structure',
@@ -80,10 +81,20 @@ export const itemsOfJavascript = [
   // Objects
   {
     label: 'Objects: The Basics',
-    value: 'objects_the_basics',
+    value: 'title_of_list',
   },
   {
     label: 'Objects',
     value: 'objects',
+  },
+  // Asynchronous JavaScript
+  {
+    label: 'Asynchronous JavaScript',
+    value: 'title_of_list',
+  },
+  {
+    label: 'Promises',
+    value: 'promises',
+    element: <Promises />,
   },
 ];
