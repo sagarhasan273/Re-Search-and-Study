@@ -20,7 +20,7 @@ function App() {
         },
       });
     } else
-      navigate('/home', {
+      navigate('/Re-Search-and-Study/home', {
         state: {
           pageName: 'home',
         },

@@ -19,7 +19,7 @@ function Home() {
     }
     pageType.forEach((item) => {
       if (type === item?.pageName) {
-        navigate(`/${item?.pathname}`, {
+        navigate(`/Re-Search-and-Study/${item?.pathname}`, {
           state: {
             pageName: item?.pageName,
           },
