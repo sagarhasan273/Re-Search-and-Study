@@ -1,5 +1,6 @@
 import { Stack } from '@mui/material';
 import React from 'react';
+import Footer from '../../components/@common/Footer';
 import BaseContainer from '../../components/BaseContainer';
 import Bold from '../../components/Bold';
 import HlText from '../../components/HlText';
@@ -172,9 +173,7 @@ function AdvanceTopics() {
           Each of these topics helps deepen your understanding of JavaScript and build the skills necessary for advanced
           programming and development of complex applications.
         </PlainText>
-        <Stack direction justifyContent="center">
-          <PlainText>Happy coding! 😊</PlainText>
-        </Stack>
+        <Footer />
       </Stack>
     </BaseContainer>
   );
