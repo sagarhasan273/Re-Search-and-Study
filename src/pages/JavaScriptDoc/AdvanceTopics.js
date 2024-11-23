@@ -172,6 +172,7 @@ function AdvanceTopics() {
           Each of these topics helps deepen your understanding of JavaScript and build the skills necessary for advanced
           programming and development of complex applications.
         </PlainText>
+        <PlainText>Happy coding! 😊</PlainText>
       </Stack>
     </BaseContainer>
   );
