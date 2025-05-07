@@ -12,7 +12,6 @@ const tabReducer = (state, action) => {
     case 'selected':
       return state.map((item) => ({ ...item, isSelected: action?.tabValue === item?.tabValue }));
     case 'delete':
-      console.log(state);
       return state.filter((item) => item?.tabValue !== action?.deleteTab);
     default:
       throw new Error('Unknown action');

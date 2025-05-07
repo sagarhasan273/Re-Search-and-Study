@@ -36,6 +36,11 @@ function Home() {
       sx={{ m: 'auto', overflowY: 'scroll', maxWidth: '700px', height: '100%', flexWrap: 'wrap' }}
     >
       <CardComponent
+        onClick={() => handleClick('ds_saga_kit')}
+        heading="DS Saga Kit"
+        para="Go to my LeetCode profile! I'm focused on improving my coding skills and preparing for technical interviews through a variety of challenges."
+      />
+      <CardComponent
         onClick={() => handleClick('leetcode')}
         heading="LeetCode"
         para="Go to my LeetCode profile! I'm focused on improving my coding skills and preparing for technical interviews through a variety of challenges."

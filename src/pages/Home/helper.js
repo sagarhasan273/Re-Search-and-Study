@@ -1,5 +1,9 @@
 export const pageType = [
   {
+    pathname: 'ds_saga_kit',
+    pageName: 'ds_saga_kit',
+  },
+  {
     pathname: 'leetcode',
     pageName: 'leetcode',
   },
